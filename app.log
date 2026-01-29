@@ -61,3 +61,209 @@
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2026-01-29 11:32:19.146 [main] INFO  l.c.s.SimpleHttpApiApplication - Starting SimpleHttpApiApplication using Java 22.0.1 with PID 12578 (/Users/chamodlakmal/Documents/simple_http_api/target/classes started by chamodlakmal in /Users/chamodlakmal/Documents/simple_http_api)
+2026-01-29 11:32:19.147 [main] DEBUG l.c.s.SimpleHttpApiApplication - Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-01-29 11:32:19.147 [main] INFO  l.c.s.SimpleHttpApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 11:32:19.393 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-29 11:32:19.399 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-29 11:32:19.399 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-29 11:32:19.458 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 296 ms
+2026-01-29 11:32:19.479 [main] INFO  l.c.s.service.HelloWorldService - HelloWorldService initialized successfully
+2026-01-29 11:32:19.479 [main] INFO  l.c.s.c.HelloWorldController - HelloWorldController initialized successfully
+2026-01-29 11:32:19.569 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-29 11:32:19.571 [main] INFO  l.c.s.SimpleHttpApiApplication - Started SimpleHttpApiApplication in 0.609 seconds (process running for 0.756)
+2026-01-29 11:32:19.572 [main] INFO  l.c.s.SimpleHttpApiApplication - Simple HTTP API is ready to accept requests on /hello-world endpoint
+2026-01-29 11:32:19.572 [main] INFO  l.c.s.SimpleHttpApiApplication - Simple HTTP API application started successfully
+2026-01-29 11:33:23.299 [main] INFO  l.c.s.SimpleHttpApiApplication - Starting SimpleHttpApiApplication using Java 21.0.8 with PID 13363 (/Users/chamodlakmal/Documents/simple_http_api/target/classes started by chamodlakmal in /Users/chamodlakmal/Documents/simple_http_api)
+2026-01-29 11:33:23.300 [main] DEBUG l.c.s.SimpleHttpApiApplication - Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-01-29 11:33:23.301 [main] INFO  l.c.s.SimpleHttpApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 11:33:23.602 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-29 11:33:23.608 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-29 11:33:23.608 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-29 11:33:23.626 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 307 ms
+2026-01-29 11:33:23.654 [main] INFO  l.c.s.service.HelloWorldService - HelloWorldService initialized successfully
+2026-01-29 11:33:23.654 [main] INFO  l.c.s.c.HelloWorldController - HelloWorldController initialized successfully
+2026-01-29 11:33:23.766 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-01-29 11:33:23.775 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-29 11:33:23.781 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-01-29 11:33:23.782 [main] ERROR l.c.s.SimpleHttpApiApplication - Failed to start Simple HTTP API application
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:423)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1012)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at lk.chamiviews.simple_http_api.SimpleHttpApiApplication.main(SimpleHttpApiApplication.java:18)
+Caused by: org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+	at org.springframework.boot.web.server.PortInUseException.lambda$throwIfPortBindingException$0(PortInUseException.java:73)
+	at org.springframework.boot.web.server.PortInUseException.lambda$ifPortBindingException$0(PortInUseException.java:89)
+	at org.springframework.boot.web.server.PortInUseException.ifCausedBy(PortInUseException.java:107)
+	at org.springframework.boot.web.server.PortInUseException.ifPortBindingException(PortInUseException.java:85)
+	at org.springframework.boot.web.server.PortInUseException.throwIfPortBindingException(PortInUseException.java:72)
+	at org.springframework.boot.tomcat.TomcatWebServer.start(TomcatWebServer.java:247)
+	at org.springframework.boot.web.server.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:220)
+	at org.springframework.boot.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:307)
+	at org.springframework.boot.tomcat.TomcatWebServer.start(TomcatWebServer.java:233)
+	... 16 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1119)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:217)
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:265)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:220)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1633)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1716)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1116)
+	... 20 common frames omitted
+2026-01-29 11:33:24.744 [main] INFO  l.c.s.SimpleHttpApiApplication - Starting SimpleHttpApiApplication using Java 21.0.8 with PID 13662 (/Users/chamodlakmal/Documents/simple_http_api/target/classes started by chamodlakmal in /Users/chamodlakmal/Documents/simple_http_api)
+2026-01-29 11:33:24.745 [main] DEBUG l.c.s.SimpleHttpApiApplication - Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-01-29 11:33:24.745 [main] INFO  l.c.s.SimpleHttpApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 11:33:25.007 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-29 11:33:25.012 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-29 11:33:25.012 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-29 11:33:25.025 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 264 ms
+2026-01-29 11:33:25.048 [main] INFO  l.c.s.service.HelloWorldService - HelloWorldService initialized successfully
+2026-01-29 11:33:25.048 [main] INFO  l.c.s.c.HelloWorldController - HelloWorldController initialized successfully
+2026-01-29 11:33:25.149 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-01-29 11:33:25.153 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-29 11:33:25.157 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-01-29 11:33:25.158 [main] ERROR l.c.s.SimpleHttpApiApplication - Failed to start Simple HTTP API application
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:423)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1012)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at lk.chamiviews.simple_http_api.SimpleHttpApiApplication.main(SimpleHttpApiApplication.java:18)
+Caused by: org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+	at org.springframework.boot.web.server.PortInUseException.lambda$throwIfPortBindingException$0(PortInUseException.java:73)
+	at org.springframework.boot.web.server.PortInUseException.lambda$ifPortBindingException$0(PortInUseException.java:89)
+	at org.springframework.boot.web.server.PortInUseException.ifCausedBy(PortInUseException.java:107)
+	at org.springframework.boot.web.server.PortInUseException.ifPortBindingException(PortInUseException.java:85)
+	at org.springframework.boot.web.server.PortInUseException.throwIfPortBindingException(PortInUseException.java:72)
+	at org.springframework.boot.tomcat.TomcatWebServer.start(TomcatWebServer.java:247)
+	at org.springframework.boot.web.server.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:220)
+	at org.springframework.boot.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:307)
+	at org.springframework.boot.tomcat.TomcatWebServer.start(TomcatWebServer.java:233)
+	... 16 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1119)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:217)
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:265)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:220)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1633)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1716)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1116)
+	... 20 common frames omitted
+2026-01-29 11:33:56.750 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-29 11:33:56.751 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-29 11:33:56.752 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-29 11:33:56.752 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-29 11:33:56.755 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7cd87d77
+2026-01-29 11:33:56.755 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5007042f
+2026-01-29 11:33:56.755 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-29 11:33:56.756 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-01-29 11:33:56.760 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/hello-world?name=alice", parameters={masked}
+2026-01-29 11:33:56.791 [http-nio-8080-exec-1] INFO  l.c.s.c.HelloWorldController - Received GET request to /hello-world with name parameter: 'alice'
+2026-01-29 11:33:56.792 [http-nio-8080-exec-1] DEBUG l.c.s.service.HelloWorldService - Processing hello request for name: 'alice'
+2026-01-29 11:33:56.792 [http-nio-8080-exec-1] DEBUG l.c.s.service.HelloWorldService - Trimmed name: 'alice'
+2026-01-29 11:33:56.792 [http-nio-8080-exec-1] DEBUG l.c.s.service.HelloWorldService - First character (uppercase): 'A'
+2026-01-29 11:33:56.792 [http-nio-8080-exec-1] INFO  l.c.s.service.HelloWorldService - Request accepted: first character 'A' is in range A-M. Returning success response for name: 'Alice'
+2026-01-29 11:33:56.792 [http-nio-8080-exec-1] DEBUG l.c.s.service.HelloWorldService - Generated capitalized name: 'Alice'
+2026-01-29 11:33:56.794 [http-nio-8080-exec-1] INFO  l.c.s.c.HelloWorldController - Request processed successfully in 2ms. Response status: 200 OK
+2026-01-29 11:33:56.794 [http-nio-8080-exec-1] DEBUG l.c.s.c.HelloWorldController - Response body: lk.chamiviews.simple_http_api.dto.SuccessResponse@7832146a
+2026-01-29 11:33:56.817 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-29 11:33:57.566 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/hello-world?name=alice", parameters={masked}
+2026-01-29 11:33:57.568 [http-nio-8080-exec-3] INFO  l.c.s.c.HelloWorldController - Received GET request to /hello-world with name parameter: 'alice'
+2026-01-29 11:33:57.568 [http-nio-8080-exec-3] DEBUG l.c.s.service.HelloWorldService - Processing hello request for name: 'alice'
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] DEBUG l.c.s.service.HelloWorldService - Trimmed name: 'alice'
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] DEBUG l.c.s.service.HelloWorldService - First character (uppercase): 'A'
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] INFO  l.c.s.service.HelloWorldService - Request accepted: first character 'A' is in range A-M. Returning success response for name: 'Alice'
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] DEBUG l.c.s.service.HelloWorldService - Generated capitalized name: 'Alice'
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] INFO  l.c.s.c.HelloWorldController - Request processed successfully in 1ms. Response status: 200 OK
+2026-01-29 11:33:57.569 [http-nio-8080-exec-3] DEBUG l.c.s.c.HelloWorldController - Response body: lk.chamiviews.simple_http_api.dto.SuccessResponse@6822044e
+2026-01-29 11:33:57.574 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-29 11:38:34.663 [main] INFO  l.c.s.SimpleHttpApiApplication - Starting SimpleHttpApiApplication using Java 21.0.8 with PID 14639 (/Users/chamodlakmal/Documents/simple_http_api/target/classes started by chamodlakmal in /Users/chamodlakmal/Documents/simple_http_api)
+2026-01-29 11:38:34.663 [main] DEBUG l.c.s.SimpleHttpApiApplication - Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-01-29 11:38:34.664 [main] INFO  l.c.s.SimpleHttpApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 11:38:34.973 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-29 11:38:34.978 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-29 11:38:34.978 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-29 11:38:34.992 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 313 ms
+2026-01-29 11:38:35.023 [main] INFO  l.c.s.service.HelloWorldService - HelloWorldService initialized successfully
+2026-01-29 11:38:35.024 [main] INFO  l.c.s.c.HelloWorldController - HelloWorldController initialized successfully
+2026-01-29 11:38:35.134 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-29 11:38:35.137 [main] INFO  l.c.s.SimpleHttpApiApplication - Started SimpleHttpApiApplication in 0.622 seconds (process running for 1.022)
+2026-01-29 11:38:35.138 [main] INFO  l.c.s.SimpleHttpApiApplication - Simple HTTP API is ready to accept requests on /hello-world endpoint
+2026-01-29 11:38:35.139 [main] INFO  l.c.s.SimpleHttpApiApplication - Simple HTTP API application started successfully
